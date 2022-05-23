@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+}
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  min-height: 100vh;
+  width: 80%;
+}
+.controls {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.controls button {
+  background: #888;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-left: 1rem;
+  padding: 0.6rem;
+  transition: all 0.4s ease;
+}
+.mute.active {
+  background: rgb(180, 180, 180);
+}
+.kick-track,
+.snare-track,
+.hihat-track {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 100%;
+}
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  cursor: pointer;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  width: 5rem;
+}
+.kick-pad {
+  background: rgb(160, 211, 244);
+}
+.kick-pad.active,
+.kick-pad:hover {
+  background: rgb(101, 132, 153);
+}
+.snare-pad {
+  background: rgb(224, 106, 208);
+}
+.snare-pad.active,
+.snare-pad:hover {
+  background: rgb(147, 70, 137);
+}
+.hihat-pad {
+  background: rgb(224, 194, 160);
+}
+.hihat-pad.active,
+.hihat-pad:hover {
+  background: rgb(148, 127, 106);
+}
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+.pad {
+  transition: all 0.4s ease;
+}
+
+.play {
+  background: #888;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  padding: 0.6rem 1rem;
+}
+
+select {
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  padding: 0.6rem;
+}
+
+.tempo {
+  margin: 3rem 0;
+}
+.tempo-slider {
+  appearance: none;
+  background: transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0rem;
+  -webkit-appearance: none;
+}
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type='range']::-webkit-slider-runnable-track {
+  background: #053a5f;
+  border-radius: 12px;
+  height: 0.4rem;
+}
+
+/******** Firefox ********/
+input[type='range']::-moz-range-track {
+  background: #053a5f;
+  border-radius: 12px;
+  height: 0.4rem;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -12px; /* Centers thumb on the track */
+  background-color: #888;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+input[type='range']::-moz-range-thumb {
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 50%; /*Removes default border-radius that FF applies*/
+  background-color: #888;
+  height: 1.6rem;
+  width: 1.6rem;
+}
+.tempo p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}

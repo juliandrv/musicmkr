@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>BeatMkr App</title>
+    <script
+      src="https://kit.fontawesome.com/18c63fbf5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="sequencer">
+      <div class="kick-track">
+        <div class="controls">
+          <h1>Kick</h1>
+          <button class="mute kick-volume" data-track="0">
+            <i class="fa-solid fa-volume-xmark fa-2x"></i>
+          </button>
+          <select name="kick-select" id="kick-select">
+            <option value="./audio/kick-classic.wav">
+              Classic Kick
+            </option>
+            <option value="./audio/kick-808.wav">808 Kick</option>
+            <option value="./audio/kick-heavy.wav">Kick Heavy</option>
+          </select>
+        </div>
+
+        <div class="kick">
+          <div class="pad kick-pad b0"></div>
+          <div class="pad kick-pad b1"></div>
+          <div class="pad kick-pad b2"></div>
+          <div class="pad kick-pad b3"></div>
+          <div class="pad kick-pad b4"></div>
+          <div class="pad kick-pad b5"></div>
+          <div class="pad kick-pad b6"></div>
+          <div class="pad kick-pad b7"></div>
+        </div>
+      </div>
+
+      <div class="snare-track">
+        <div class="controls">
+          <h1>Snare</h1>
+          <button class="mute snare-volume" data-track="1">
+            <i class="fa-solid fa-volume-xmark fa-2x"></i>
+          </button>
+          <select name="snare-select" id="snare-select">
+            <option value="./audio/snare-acoustic01.wav">
+              Classic Snare
+            </option>
+            <option value="./audio/snare-808.wav">808 Snare</option>
+            <option value="./audio/snare-vinyl02.wav">
+              Snare Vinyl
+            </option>
+          </select>
+        </div>
+
+        <div class="snare">
+          <div class="pad snare-pad b0"></div>
+          <div class="pad snare-pad b1"></div>
+          <div class="pad snare-pad b2"></div>
+          <div class="pad snare-pad b3"></div>
+          <div class="pad snare-pad b4"></div>
+          <div class="pad snare-pad b5"></div>
+          <div class="pad snare-pad b6"></div>
+          <div class="pad snare-pad b7"></div>
+        </div>
+      </div>
+
+      <div class="hihat-track">
+        <div class="controls">
+          <h1>Hitat</h1>
+          <button class="mute hihat-volume" data-track="2">
+            <i class="fa-solid fa-volume-xmark fa-2x"></i>
+          </button>
+          <select name="hihat-select" id="hihat-select">
+            <option value="./audio/hihat-acoustic01.wav">
+              Classic Hihat
+            </option>
+            <option value="./audio/hihat-808.wav">808 Hihat</option>
+          </select>
+        </div>
+
+        <div class="hihat">
+          <div class="pad hihat-pad b0"></div>
+          <div class="pad hihat-pad b1"></div>
+          <div class="pad hihat-pad b2"></div>
+          <div class="pad hihat-pad b3"></div>
+          <div class="pad hihat-pad b4"></div>
+          <div class="pad hihat-pad b5"></div>
+          <div class="pad hihat-pad b6"></div>
+          <div class="pad hihat-pad b7"></div>
+        </div>
+      </div>
+
+      <button class="play">Play</button>
+
+      <div class="tempo">
+        <input
+          type="range"
+          class="tempo-slider"
+          min="20"
+          max="300"
+          value="150"
+        />
+        <p>Tempo <span class="tempo-nr">150</span></p>
+      </div>
+    </div>
+
+    <audio src="./audio/kick-classic.wav" class="kick-sound"></audio>
+    <audio
+      src="./audio/snare-acoustic01.wav"
+      class="snare-sound"
+    ></audio>
+    <audio
+      src="./audio/hihat-acoustic01.wav"
+      class="hihat-sound"
+    ></audio>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
